@@ -1,0 +1,27 @@
+.description {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 25px;
+}
+
+.description__data {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.description__header {
+    font-size: 34px;
+}
+
+.description__author {
+    font-size: 20px;
+}
+
+.description__text {
+    font-size: 16px;
+}

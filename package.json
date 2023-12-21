@@ -1,0 +1,19 @@
+{
+  "name": "41.videojs-testtask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.3.3",
+    "videojs-dynamic-watermark": "^1.1.0",
+    "videojs-rotate-player-plugin": "^1.0.1"
+  },
+  "devDependencies": {
+    "video.js": "^8.6.1"
+  }
+}

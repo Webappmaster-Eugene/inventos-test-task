@@ -1,0 +1,58 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    flex-direction: column;
+    height: max-content;
+    padding: 15px 40px;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding: 5px 20px;
+    }
+}
+
+.main-content {
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    height: max-content;
+    box-sizing: border-box;
+}
+
+.video-js {
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .video-js {
+        height: 400px;
+    }
+}
+
+.vjs-matrix.video-js {
+    color: #00ff00;
+}
+
+/* Change the border of the big play button. */
+.vjs-matrix .vjs-big-play-button {
+    border-color: #00ff00;
+}
+
+/* Change the color of various "bars". */
+.vjs-matrix .vjs-volume-level,
+.vjs-matrix .vjs-play-progress,
+.vjs-matrix .vjs-slider-bar {
+    background: #00ff00;
+}

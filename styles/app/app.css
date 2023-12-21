@@ -1,0 +1,20 @@
+:root {
+    --main-color: #ff6f69;
+    --border-color: #E1E6F9;
+    --focus-color: transparent;
+}
+
+body {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../../assets/images/cover2.png');
+    backdrop-filter: blur(4px);
+    min-height: 100vh;
+    height: max-content;
+    flex-direction: column;
+    gap: 30px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: rgba(245, 245, 245, 0.96);
+    background-blend-mode: multiply;
+}

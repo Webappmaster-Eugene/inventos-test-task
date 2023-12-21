@@ -1,0 +1,244 @@
+<html lang='ru'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link href='styles/styles.css' rel='stylesheet' />
+  <link href='https://vjs.zencdn.net/8.6.1/video-js.css' rel='stylesheet' />
+  <link href='https://unpkg.com/@videojs/themes@1/dist/forest/index.css' rel='stylesheet'>
+  <link href='./video-js-plugin-chat/dist/styles.css' rel='stylesheet'>
+  <title>Тестовое задание от Евгения - чат для видеоплеера</title>
+</head>
+
+<body>
+
+<header class='header'>
+  <div class='header-container'>
+    <div class='logo-block'>
+      <a class='header__link' href='#'><img class='header__logo' src='./assets/images/logo.png'
+                                            alt='Логотип TrueTube'>
+        <h1 class='header__header'><span class='header__header-part'>Tube</span></h1>
+      </a>
+    </div>
+
+    <nav class='header-burger'>
+      <div class='navbar'>
+        <div class='container nav-container'>
+          <input class='checkbox' type='checkbox' name='' id='' />
+          <div class='hamburger-lines'>
+            <span class='line line1'></span>
+            <span class='line line2'></span>
+            <span class='line line3'></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav class='header-nav'>
+      <ul class='list-links-header'>
+        <li class='list-item'>
+          <a href='#' class='list-link'>Пункт меню 1</a>
+        </li>
+
+        <li class='list-item'>
+          <a href='#' class='list-link'>Пункт меню 2</a>
+        </li>
+
+        <li class='list-item'>
+          <a href='#' class='list-link'>Пункт меню 3</a>
+        </li>
+
+        <li class='list-item'>
+          <a href='#' class='list-link'>Пункт меню 4</a>
+        </li>
+
+        <li class='list-item'>
+          <a href='#' class='list-link'>Пункт меню 5</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class='main-content'>
+    <div class='video-container'>
+      <video
+        id='videoPlayer'
+        class='video-js vjs-big-play-centered vjs-theme-forest'
+        controls
+        preload='auto'
+        width='1280'
+        height='659'
+        poster='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGRcSUXiK_DWYnQasn5FAgWrsfviDzEPqyIil7QU3s72tA1M-eB4RIxE4KsdjuC2NCEA90S6f_0HHhT8q2cx7_NNygZ85Zhx7gyLU1rdER25duVA6A4rW0v7RDys_nv5rCr4ES9tM0RZ3AlkaFsxAZW_csKZKL4qJSc3KEgqNnDZmfBLwLqZecDwz1VQ/w1200-h630-p-k-no-nu/птички.jpg'
+      >
+        <source
+          src='https://video-previews.elements.envatousercontent.com/h264-video-previews/d7f84f80-0985-11e3-a600-005056926838/5420259.mp4'
+          type='video/mp4' />
+        <p class='vjs-no-js'>
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href='https://videojs.com/html5-video-support/' target='_blank'
+          >supports HTML5 video</a
+          >
+        </p>
+      </video>
+    </div>
+
+    <section class='description'>
+      <h2 class='description__header'>Видео для успокоения - щебет лесных птиц</h2>
+
+      <div class='description__data'>
+        <div class='description__meta'>
+          <p class='description__author'>Геннадий Смирнов</p>
+        </div>
+
+        <div class='description__descr'>
+          <p class='description__text'>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cumque earum eos excepturi facilis hic
+            libero,
+            maiores nobis, non nulla officia, qui quia recusandae sed sit sunt vel vitae voluptates.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cumque earum eos excepturi facilis hic
+            libero,
+            maiores nobis, non nulla officia, qui quia recusandae sed sit sunt vel vitae voluptates.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cumque earum eos excepturi facilis hic
+            libero,
+            maiores nobis, non nulla officia, qui quia recusandae sed sit sunt vel vitae voluptates.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <section class='chat'>
+      <div class='messages'>
+      </div>
+
+      <form class='form'>
+        <fieldset class='form__set'>
+          <legend class='form__legend'>Комментарии к видео</legend>
+          <label class='form__label' for='text'>Поле для отправки сообщений</label>
+
+          <div class='form__input-block'>
+            <textarea class='form__input' id='text' name='text' placeholder='Напишите сообщение...'></textarea>
+
+            <button class='form__button'><img class='form__button-icon' src='assets/images/send.png' alt='Отправить' />
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <template id='comment-template'>
+      <div class='message-container'>
+        <div class='message'>
+          <img class='message__avatar' src='./assets/images/1.png' alt='Аватар пользователя'>
+
+          <div class='message__info'>
+            <div class='message__meta'>
+              <p class='message__date'>textDate</p>
+              <p class='message__author'>Вы</p>
+            </div>
+
+            <div class='message__content'>
+              <p class='message__text'>textComment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</main>
+
+<footer class='footer'>
+
+  <div class='footer__container'>
+    <nav class='nav'>
+      <div class='nav_block nav_block1'>
+        <h3 class='nav__header'>Блок ссылок 1</h3>
+        <ul class='list-links'>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 1</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 2</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 3</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 4</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class='nav_block nav_block1'>
+        <h3 class='nav__header'>Блок ссылок 2</h3>
+        <ul class='list-links'>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 1</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 2</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 3</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 4</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class='nav_block nav_block1'>
+        <h3 class='nav__header'>Блок ссылок 3</h3>
+        <ul class='list-links'>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 1</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 2</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 3</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 4</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class='nav_block nav_block1'>
+        <h3 class='nav__header'>Блок ссылок 4</h3>
+        <ul class='list-links'>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 1</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 2</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 3</a>
+          </li>
+          <li class='list-item'>
+            <a class='list-link' href='#'>Ссылка 4</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+</footer>
+
+<script src='https://vjs.zencdn.net/8.6.1/video.min.js'></script>
+<script src='https://cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js'></script>
+<script src='node_modules/videojs-dynamic-watermark/dist/videojs-dynamic-watermark.min.js'></script>
+<script src='node_modules/videojs-rotate-player-plugin/dist/videojs-rotate-player-plugin.min.js'></script>
+<script type='module' src='video-js-plugin-chat/dist/video-js-plugin-chat.js'></script>
+<script type='module' src='index.js'></script>
+
+</body>
+
+</html>
